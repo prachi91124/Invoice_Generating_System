@@ -1,3 +1,4 @@
+"""
 module name: purchase
 function name: purchase
 overview of this function:
@@ -35,15 +36,15 @@ def purchase(List):
                     p = False
                 except:  # executes, if customer entered unexpected value.
                     print("\t\tError!!!\nPlease enter integer value!! ")
-            if product_name == L[0][0].upper() and p_quantity <= int(L[0][4]):
+            if product_name == L[0][0].upper() and p_quantity <= int(L[0][2]):
                 q[product_name] = p_quantity
-            elif product_name == L[1][0].upper() and p_quantity <= int(L[1][4]):
+            elif product_name == L[1][0].upper() and p_quantity <= int(L[1][2]):
                 q[product_name] = p_quantity
-            elif product_name == L[2][0].upper() and p_quantity <= int(L[2][4]):
+            elif product_name == L[2][0].upper() and p_quantity <= int(L[2][2]):
                 q[product_name] = p_quantity
-            elif product_name == L[3][0].upper() and p_quantity <= int(L[3][4]):
+            elif product_name == L[3][0].upper() and p_quantity <= int(L[3][2]):
                 q[product_name] = p_quantity
-            elif product_name == L[4][0].upper() and p_quantity <= int(L[4][4]):
+            elif product_name == L[4][0].upper() and p_quantity <= int(L[4][2]):
                 q[product_name] = p_quantity
             else:
                 print(
@@ -57,8 +58,7 @@ def purchase(List):
             print("PRODUCT\t\tPRICE\t\tQUANTITY")
             print("--------------------------------------------")
             for i in range(len(L)):
-                print(L[i][0], "\t\t", L[i][1], "\t\t",
-                      L[i][4])  # print, last updated product name, quantity and price.
+                print(L[i][0], "\t\t", L[i][1], "\t\t", L[i][2])  # print, last updated product name, quantity and price.
             print("--------------------------------------------")
 
     print("\nYou Choosed Items and it's Quantity respectively:\n", q, "\n")
@@ -136,19 +136,19 @@ def purchase(List):
     for keys in q.keys():  # In this loop, write in a file only those product which is purchase by user.
         if keys == "CHIPS":
             file.write(
-                str("\n" + str(keys) + " \t\t " + str(q['CHIPS']) + " \t\t " + str(L[0][1]) + " \t\t " + str(p_amount)))
+                str("\n" + str(keys) + " \t\t " + str(q['CHIPS']) + " \t\t " + str(L[0][1]) + " \t\t " + str(c_amount)))
         elif keys == "WATER BOTTLE":
-            file.write(str(
-                "\n" + str(keys) + " \t\t " + str(q['WATER BOTTLE']) + " \t\t " + str(L[1][1]) + " \t\t " + str(l_amount)))
+            file.write(str0(
+                "\n" + str(keys) + " \t\t " + str(q['WATER BOTTLE']) + " \t\t " + str(L[1][1]) + " \t\t " + str(w_amount)))
         elif keys == "MILK":
             file.write(str(
-                "\n" + str(keys) + " \t\t " + str(q['MILK']) + " \t\t " + str(L[2][1]) + " \t\t " + str(l_amount)))
+                "\n" + str(keys) + " \t\t " + str(q['MILK']) + " \t\t " + str(L[2][1]) + " \t\t " + str(m_amount)))
         elif keys == "CURD":
             file.write(str(
-                "\n" + str(keys) + " \t\t " + str(q['CURD']) + " \t\t " + str(L[3][1]) + " \t\t " + str(l_amount)))
+                "\n" + str(keys) + " \t\t " + str(q['CURD']) + " \t\t " + str(L[3][1]) + " \t\t " + str(cu_amount)))
         else:
             file.write(
-                str("\n" + str(keys) + " \t\t " + str(q['BREAD']) + " \t\t " + str(L[4][1]) + " \t\t " + str(h_amount)))
+                str("\n" + str(keys) + " \t\t " + str(q['BREAD']) + " \t\t " + str(L[4][1]) + " \t\t " + str(b_amount)))
 
     file.write("\n-------------------------------------------------------------")
     file.write("\n\t\t\t Your payable amount is: " + str(total))

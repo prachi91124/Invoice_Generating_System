@@ -7,15 +7,15 @@ def over_write(List, Dictionary):   # an overwrite function
     """
     for keys in d.keys():
         if keys == "chips":
-            L[0][4] = str(int(L[0][4])-d['chips'])
+            L[0][2] = str(int(L[0][2])-d['chips'])
         elif keys == "water bottle":
-            L[1][4] = str(int(L[1][4])-d['water bottle'])
+            L[1][2] = str(int(L[1][2])-d['water bottle'])
         elif keys == "milk":
-            L[2][4] = str(int(L[2][4])-d['milk'])
+            L[2][2] = str(int(L[2][2])-d['milk'])
         elif keys == "curd":
-            L[3][4] = str(int(L[3][4])-d['curd'])
+            L[3][2] = str(int(L[3][2])-d['curd'])
         else:
-            L[4][4] = str(int(L[4][4])-d['bread'])
+            L[4][2] = str(int(L[4][2])-d['bread'])
     print("\nRemaining Stock Products:\n",L)
         
     files = open("products.txt", "w")  # opens stock file (products.txt) file in write mode.
