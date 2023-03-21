@@ -138,7 +138,7 @@ def purchase(List):
             file.write(
                 str("\n" + str(keys) + " \t\t " + str(q['CHIPS']) + " \t\t " + str(L[0][1]) + " \t\t " + str(c_amount)))
         elif keys == "WATER BOTTLE":
-            file.write(str0(
+            file.write(str(
                 "\n" + str(keys) + " \t\t " + str(q['WATER BOTTLE']) + " \t\t " + str(L[1][1]) + " \t\t " + str(w_amount)))
         elif keys == "MILK":
             file.write(str(

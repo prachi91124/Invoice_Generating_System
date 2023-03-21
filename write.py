@@ -14,7 +14,7 @@ def over_write(List, Dictionary):   # an overwrite function
             L[2][2] = str(int(L[2][2])-d['milk'])
         elif keys == "curd":
             L[3][2] = str(int(L[3][2])-d['curd'])
-        else:
+        elif keys == "bread":
             L[4][2] = str(int(L[4][2])-d['bread'])
     print("\nRemaining Stock Products:\n",L)
         
